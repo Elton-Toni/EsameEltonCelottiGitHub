@@ -1,0 +1,60 @@
+﻿
+@{
+  ViewBag.Title = "NewUser";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+<body>
+
+  <div class="form-horizontal">
+    <div class="form-group">
+      <label class="col-md-2">Name</label>
+      <div class="col-md-10">
+        <input class="form-control" type="text" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-2">Surname</label>
+      <div class="col-md-10">
+        <input class="form-control" type="text" />
+      </div>
+    </div>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label class="col-md-2">Email</label>
+        <div class="col-md-10">
+          <input class="form-control" type="text" />
+        </div>
+      </div>
+
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label class="col-md-2">Username</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2">Password</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+          @Html.ActionLink("Registrati", "Index", "Tickets")
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<EltonEsame.Models.Registry>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientFlag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InternalFlag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierFlag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegistryCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassWordField)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientFlag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InternalFlag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupplierFlag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegistryCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassWordField)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdRegistry }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdRegistry }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdRegistry })
+        </td>
+    </tr>
+}
+
+</table>

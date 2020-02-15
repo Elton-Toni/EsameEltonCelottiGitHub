@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EltonEsame.Models.Ticket>
+
+@{
+  ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-4">
+      @Html.ActionLink("Accedi", "Login", "Home")
+    </div>
+    <div class="col-md-4">
+      @Html.ActionLink("Registrati", "NewUser", "Home")
+    </div>
+  </div>
+</div>
+
+<table class="table">
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => model.RequestTitle)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.RequestDescription)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.ResponseDescription)
+    </th>
+    <th></th>
+  </tr>
+
+  @foreach (var item in Model) {
+    <tr>
+      kds
+      <td>
+        @Html.DisplayFor(modelItem => item.RequestTitle)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.RequestDescription)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.ResponseDescription)
+      </td>
+      <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.IdTicket }) |
+        @Html.ActionLink("Details", "Details", new { id = item.IdTicket }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.IdTicket })
+      </td>
+    </tr>
+  }
+
+</table>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<EltonEsame.Models.Ticket>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Registry.FirstLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Registry1.FirstLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClosingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResponseDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Registry.FirstLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Registry1.FirstLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClosingDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResponseDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdTicket }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdTicket }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdTicket })
+        </td>
+    </tr>
+}
+
+</table>
